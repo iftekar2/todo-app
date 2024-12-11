@@ -9,7 +9,6 @@ import { AuthProvider, useAuth } from "./AuthContext";
 import Login from "./LogIn";
 import Signup from "./SignUp";
 import TodoList from "./TodoList";
-import LandingPage from "./LandingPage";
 import "./App.css";
 
 const PrivateRoute = ({ children }) => {
@@ -17,13 +16,12 @@ const PrivateRoute = ({ children }) => {
   return currentUser ? children : <Navigate to="/login" />;
 };
 
-const App = () => {
+function App() {
   return (
     <AuthProvider>
       <Router>
         <div className="App">
           <Routes>
-            <Route path="/" element={<LandingPage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route
@@ -34,11 +32,12 @@ const App = () => {
                 </PrivateRoute>
               }
             />
+            <Route path="/" element={<Navigate to="/login" />} />
           </Routes>
         </div>
       </Router>
     </AuthProvider>
   );
-};
+}
 
 export default App;

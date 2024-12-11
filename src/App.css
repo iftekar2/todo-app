@@ -153,3 +153,34 @@ button[type="submit"]:hover {
     margin-left: 0;
   }
 }
+
+.landing-container {
+  text-align: center;
+  padding: 50px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.landing-container h1 {
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.auth-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.auth-button {
+  padding: 12px 30px;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+  background-color: #2980b9;
+}
